@@ -9,23 +9,27 @@
 import WatchKit
 import Foundation
 
-
 class InterfaceController: WKInterfaceController {
 
-    override func awakeWithContext(context: AnyObject?) {
-        super.awakeWithContext(context)
+    @IBOutlet var receivedText: WKInterfaceLabel!
+    
+    @IBAction func hitSend() {
+        let d = NSDate().description
         
-        // Configure interface objects here.
+        let extensionDelegate = WKExtension.sharedExtension().delegate as! ExtensionDelegate
+        
+        extensionDelegate.sendMessage("Hi, Chris, it's \(d)!")
     }
 
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
-    }
-
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
+        
+        NSNotificationCenter.defaultCenter().addObserverForName("hewioewofbewobf", object: nil, queue: .mainQueue()) { notification in
+            if let receivedString = notification.userInfo?["fbewuofbeuwof"] as? String {
+                self.receivedText.setText(receivedString)
+            }
+        }
     }
 
 }
