@@ -10,14 +10,7 @@ import Foundation
 import WatchConnectivity
 
 @available(iOS 9.0, *)
-protocol WatchSessionManagerProtocol {
-    
-    var validReachableSession: WCSession? { get }
-    
-}
-
-@available(iOS 9.0, *)
-class WatchSessionManager: NSObject, WCSessionDelegate, WatchSessionManagerProtocol {
+class WatchSessionManager: NSObject, WCSessionDelegate, WatchSessionProvider {
     
     static let sharedManager = WatchSessionManager()
     private override init() {

@@ -12,14 +12,14 @@ import WatchConnectivity
 @available(iOS 9.0, *)
 struct WatchCommunicationManager {
     
-    private let watchSessionManager: WatchSessionManagerProtocol
+    private let watchSessionProvider: WatchSessionProvider
     
-    init(watchSessionManager: WatchSessionManagerProtocol) {
-        self.watchSessionManager = watchSessionManager
+    init(watchSessionManager: WatchSessionProvider) {
+        self.watchSessionProvider = watchSessionManager
     }
     
     func sendMessageToWatch(message: String) {
-        guard let session = watchSessionManager.validReachableSession else { return }
+        guard let session = watchSessionProvider.validReachableSession else { return }
         
         session.sendMessage(["fbewuofbeuwof": message], replyHandler: nil, errorHandler: nil)
     }

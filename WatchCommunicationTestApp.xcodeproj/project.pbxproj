@@ -22,6 +22,7 @@
 		1765F4C61C1739F700617471 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1765F4C51C1739F700617471 /* WatchSessionManager.swift */; };
 		1765F4C81C173CAA00617471 /* WCSessionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1765F4C71C173CAA00617471 /* WCSessionExtensions.swift */; };
 		1765F4CA1C17415C00617471 /* WatchCommunicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1765F4C91C17415C00617471 /* WatchCommunicationManager.swift */; };
+		1765F4CC1C17480F00617471 /* WatchSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1765F4CB1C17480F00617471 /* WatchSessionProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		1765F4C51C1739F700617471 /* WatchSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
 		1765F4C71C173CAA00617471 /* WCSessionExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCSessionExtensions.swift; sourceTree = "<group>"; };
 		1765F4C91C17415C00617471 /* WatchCommunicationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchCommunicationManager.swift; sourceTree = "<group>"; };
+		1765F4CB1C17480F00617471 /* WatchSessionProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchSessionProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 				1765F4C51C1739F700617471 /* WatchSessionManager.swift */,
 				1765F4C71C173CAA00617471 /* WCSessionExtensions.swift */,
 				1765F4C91C17415C00617471 /* WatchCommunicationManager.swift */,
+				1765F4CB1C17480F00617471 /* WatchSessionProvider.swift */,
 			);
 			path = WatchCommunicationTestApp;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				1765F4C61C1739F700617471 /* WatchSessionManager.swift in Sources */,
 				175AFAE01C15D3BD00F241A9 /* ViewController.swift in Sources */,
 				1765F4CA1C17415C00617471 /* WatchCommunicationManager.swift in Sources */,
+				1765F4CC1C17480F00617471 /* WatchSessionProvider.swift in Sources */,
 				1765F4C81C173CAA00617471 /* WCSessionExtensions.swift in Sources */,
 				175AFADE1C15D3BD00F241A9 /* AppDelegate.swift in Sources */,
 			);
