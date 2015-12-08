@@ -10,7 +10,14 @@ import Foundation
 import WatchConnectivity
 
 @available(iOS 9.0, *)
-class WatchSessionManager: NSObject, WCSessionDelegate {
+protocol WatchSessionManagerProtocol {
+    
+    var validReachableSession: WCSession? { get }
+    
+}
+
+@available(iOS 9.0, *)
+class WatchSessionManager: NSObject, WCSessionDelegate, WatchSessionManagerProtocol {
     
     static let sharedManager = WatchSessionManager()
     private override init() {
@@ -22,15 +29,6 @@ class WatchSessionManager: NSObject, WCSessionDelegate {
     func startSession() {
         session?.delegate = self
         session?.activateSession()
-    }
-    
-    // TODO: consider moving this to a separate WatchCommunicationManager
-    func sendMessageToWatch(message: String) {
-        let session = WCSession.defaultSession()
-        
-        guard session.reachable else { return }
-        
-        session.sendMessage(["fbewuofbeuwof": message], replyHandler: nil, errorHandler: nil)
     }
     
     // MARK: WCSessionDelegate Method
@@ -52,7 +50,7 @@ class WatchSessionManager: NSObject, WCSessionDelegate {
         return session
     }
     
-    private var validReachableSession: WCSession? {
+    var validReachableSession: WCSession? {
         guard let session = session where session.isValidAndReachable else {
             return nil
         }

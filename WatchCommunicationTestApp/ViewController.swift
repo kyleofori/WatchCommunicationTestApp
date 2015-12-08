@@ -16,7 +16,10 @@ class ViewController: UIViewController {
         let d = NSDate().description
         
         if #available(iOS 9.0, *) {
-            WatchSessionManager.sharedManager.sendMessageToWatch("Hi, Kyle, it's \(d)!")
+            let sessionManager = WatchSessionManager.sharedManager
+            
+            WatchCommunicationManager(watchSessionManager: sessionManager)
+                .sendMessageToWatch("Hi, Kyle, it's \(d)!")
         }
     }
     
