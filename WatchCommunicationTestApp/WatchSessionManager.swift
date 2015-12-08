@@ -9,6 +9,7 @@
 import Foundation
 import WatchConnectivity
 
+@available(iOS 9.0, *)
 class WatchSessionManager: NSObject, WCSessionDelegate {
     
     static let sharedManager = WatchSessionManager()
@@ -21,6 +22,22 @@ class WatchSessionManager: NSObject, WCSessionDelegate {
     func startSession() {
         session?.delegate = self
         session?.activateSession()
+    }
+    
+    // TODO: consider moving this to a separate WatchCommunicationManager
+    func sendMessageToWatch(message: String) {
+        let session = WCSession.defaultSession()
+        
+        guard session.reachable else { return }
+        
+        session.sendMessage(["fbewuofbeuwof": message], replyHandler: nil, errorHandler: nil)
+    }
+    
+    // MARK: WCSessionDelegate Method
+    
+    func session(session: WCSession, didReceiveMessage message: [String : AnyObject]) {
+        print("short")
+        NSNotificationCenter.defaultCenter().postNotificationName("any-name", object: nil, userInfo: message)
     }
     
     // MARK: Private Implementation

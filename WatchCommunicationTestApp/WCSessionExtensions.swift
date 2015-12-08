@@ -9,6 +9,7 @@
 import Foundation
 import WatchConnectivity
 
+@available(iOS 9.0, *)
 extension WCSession {
     
     var isValid: Bool {
