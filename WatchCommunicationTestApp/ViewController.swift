@@ -15,9 +15,7 @@ class ViewController: UIViewController {
     @IBAction func hitSend(sender: UIButton) {
         let d = NSDate().description
         
-        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        
-        appDelegate.sendMessage("Hi, Kyle, it's \(d)!")
+        WatchSessionManager.sharedManager.sendMessage("Hi, Kyle, it's \(d)!")
     }
     
     override func viewWillAppear(animated: Bool) {
