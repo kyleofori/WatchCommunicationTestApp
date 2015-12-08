@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -18,31 +17,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26b-tP-nOa">
-                                <rect key="frame" x="279" y="289" width="42" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26b-tP-nOa">
+                                <rect key="frame" x="279" y="20" width="42" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LwS-aD-b67">
-                                <rect key="frame" x="255" y="338" width="70" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="n7X-0D-zau"/>
-                                </constraints>
-                                <state key="normal" title="Send date"/>
-                                <connections>
-                                    <action selector="hitSend:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Gs-xx-XBc"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="26b-tP-nOa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9RL-Ib-RP4"/>
-                            <constraint firstItem="LwS-aD-b67" firstAttribute="top" secondItem="26b-tP-nOa" secondAttribute="bottom" constant="28.5" id="GXH-lw-MXe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="LwS-aD-b67" secondAttribute="trailing" constant="255" id="PWv-Z4-wrz"/>
+                            <constraint firstItem="26b-tP-nOa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="SSc-6i-hmc"/>
                             <constraint firstItem="26b-tP-nOa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="npr-7a-wFD"/>
                         </constraints>
                     </view>

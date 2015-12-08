@@ -9,6 +9,9 @@
 import Foundation
 import WatchConnectivity
 
+// TODO: this would never live here in real life
+import Alamofire
+
 @available(iOS 9.0, *)
 class WatchSessionManager: NSObject, WCSessionDelegate, WatchSessionProvider {
     
@@ -27,8 +30,17 @@ class WatchSessionManager: NSObject, WCSessionDelegate, WatchSessionProvider {
     // MARK: WCSessionDelegate Method
     
     func session(session: WCSession, didReceiveMessage message: [String : AnyObject]) {
-        print("short")
-        NSNotificationCenter.defaultCenter().postNotificationName("any-name", object: nil, userInfo: message)
+        let requestURL = "http://api.wunderground.com/api/9767e85ea7d17a16/conditions/q/CA/San_Francisco.json"
+        
+        Alamofire.request(.GET, requestURL)
+            .responseJSON { (_, _, result: Result<AnyObject>) in
+                if let JSON = result.value,
+                    dict = JSON as? [String: AnyObject],
+                    currentObservation = dict["current_observation"] as? [String: AnyObject],
+                    currentTemperature = currentObservation["temperature_string"] {
+                        NSNotificationCenter.defaultCenter().postNotificationName("any-name", object: nil, userInfo: ["any-key": currentTemperature])
+                }
+        }
     }
     
     // MARK: Private Implementation
