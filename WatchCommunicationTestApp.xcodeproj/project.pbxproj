@@ -19,6 +19,7 @@
 		175AFB011C15D3BD00F241A9 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175AFB001C15D3BD00F241A9 /* InterfaceController.swift */; };
 		175AFB031C15D3BD00F241A9 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175AFB021C15D3BD00F241A9 /* ExtensionDelegate.swift */; };
 		175AFB051C15D3BD00F241A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 175AFB041C15D3BD00F241A9 /* Assets.xcassets */; };
+		1765F4C61C1739F700617471 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1765F4C51C1739F700617471 /* WatchSessionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		175AFB021C15D3BD00F241A9 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		175AFB041C15D3BD00F241A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		175AFB061C15D3BD00F241A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1765F4C51C1739F700617471 /* WatchSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				175AFAE41C15D3BD00F241A9 /* Assets.xcassets */,
 				175AFAE61C15D3BD00F241A9 /* LaunchScreen.storyboard */,
 				175AFAE91C15D3BD00F241A9 /* Info.plist */,
+				1765F4C51C1739F700617471 /* WatchSessionManager.swift */,
 			);
 			path = WatchCommunicationTestApp;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1765F4C61C1739F700617471 /* WatchSessionManager.swift in Sources */,
 				175AFAE01C15D3BD00F241A9 /* ViewController.swift in Sources */,
 				175AFADE1C15D3BD00F241A9 /* AppDelegate.swift in Sources */,
 			);
@@ -527,6 +531,7 @@
 				175AFB0B1C15D3BD00F241A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		175AFB0D1C15D3BD00F241A9 /* Build configuration list for PBXNativeTarget "WatchCommunicationTestApp WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +540,7 @@
 				175AFB0F1C15D3BD00F241A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		175AFB111C15D3BD00F241A9 /* Build configuration list for PBXNativeTarget "WatchCommunicationTestApp" */ = {
 			isa = XCConfigurationList;
@@ -543,6 +549,7 @@
 				175AFB131C15D3BD00F241A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
