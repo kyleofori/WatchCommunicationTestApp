@@ -28,7 +28,7 @@ class WatchSessionManager: NSObject, WCSessionDelegate {
     private let session: WCSession? = WCSession.isSupported() ? WCSession.defaultSession() : nil
     
     private var validSession: WCSession? {
-        guard let session = session where session.paired && session.watchAppInstalled else {
+        guard let session = session where session.isValid else {
             return nil
         }
         
@@ -36,7 +36,7 @@ class WatchSessionManager: NSObject, WCSessionDelegate {
     }
     
     private var validReachableSession: WCSession? {
-        guard let session = validSession where session.reachable else {
+        guard let session = session where session.isValidAndReachable else {
             return nil
         }
         
