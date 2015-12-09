@@ -35,6 +35,11 @@ class WatchSessionManager: NSObject, WCSessionDelegate {
         NSNotificationCenter.defaultCenter().postNotificationName("any-name", object: nil, userInfo: message)
     }
     
+    func session(session: WCSession, didReceiveMessage message: [String : AnyObject]) {
+        print("short")
+        // issue network request here
+    }
+    
     func sendMessage(message: String) {
         let session = WCSession.defaultSession()
         
