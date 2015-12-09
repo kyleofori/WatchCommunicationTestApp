@@ -61,7 +61,7 @@ class WatchSessionManager: NSObject, WCSessionDelegate {
         return session
     }
     
-    var validReachableSession: WCSession? {
+    private var validReachableSession: WCSession? {
         guard let session = session where session.isValidAndReachable else {
             return nil
         }
