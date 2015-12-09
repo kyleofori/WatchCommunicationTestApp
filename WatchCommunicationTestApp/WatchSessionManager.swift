@@ -27,7 +27,13 @@ class WatchSessionManager: NSObject, WCSessionDelegate {
         session?.activateSession()
     }
     
-    // MARK: WCSessionDelegate Method
+    func sendMessageToWatch(message: String) {
+        guard let session = validReachableSession else { return }
+        
+        session.sendMessage(["fbewuofbeuwof": message], replyHandler: nil, errorHandler: nil)
+    }
+    
+    // MARK: WCSessionDelegate Methods
     
     func session(session: WCSession, didReceiveMessage message: [String : AnyObject]) {
         let requestURL = "http://api.wunderground.com/api/9767e85ea7d17a16/conditions/q/CA/San_Francisco.json"
@@ -41,12 +47,6 @@ class WatchSessionManager: NSObject, WCSessionDelegate {
                         NSNotificationCenter.defaultCenter().postNotificationName("any-name", object: nil, userInfo: ["any-key": currentTemperature])
                 }
         }
-    }
-    
-    func sendMessageToWatch(message: String) {
-        guard let session = validReachableSession else { return }
-        
-        session.sendMessage(["fbewuofbeuwof": message], replyHandler: nil, errorHandler: nil)
     }
     
     // MARK: Private Implementation

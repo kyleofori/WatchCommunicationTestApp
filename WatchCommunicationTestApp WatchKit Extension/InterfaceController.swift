@@ -16,9 +16,7 @@ class InterfaceController: WKInterfaceController {
     @IBAction func hitSend() {
         let d = NSDate().description
         
-        let extensionDelegate = WKExtension.sharedExtension().delegate as! ExtensionDelegate
-        
-        extensionDelegate.sendMessage("Hi, Chris, it's \(d)!")
+        WatchSessionManager.sharedManager.sendMessageToPhone("Hi, Chris, it's \(d)!")
     }
 
     override func willActivate() {
