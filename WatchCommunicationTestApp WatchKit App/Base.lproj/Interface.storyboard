@@ -10,13 +10,13 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchCommunicationTestApp_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <button width="1" alignment="left" title="Send time" id="5Of-lR-BVM">
+                        <button width="1" alignment="left" title="Get Temp" id="5Of-lR-BVM">
                             <connections>
                                 <action selector="hitSend" destination="AgC-eL-Hgc" id="DcY-UT-LdO"/>
                             </connections>
                         </button>
-                        <label alignment="left" text="Received time" numberOfLines="0" id="7Dz-W2-dDk"/>
-                        <label alignment="left" id="fSt-Rm-qQ5"/>
+                        <label alignment="left" text="Temperature:" id="fSt-Rm-qQ5"/>
+                        <label alignment="left" numberOfLines="0" id="7Dz-W2-dDk"/>
                     </items>
                     <connections>
                         <outlet property="receivedText" destination="7Dz-W2-dDk" id="5vu-nD-mK0"/>
