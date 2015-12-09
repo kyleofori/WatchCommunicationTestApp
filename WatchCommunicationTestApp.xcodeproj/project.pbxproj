@@ -21,8 +21,6 @@
 		175AFB051C15D3BD00F241A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 175AFB041C15D3BD00F241A9 /* Assets.xcassets */; };
 		1765F4C61C1739F700617471 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1765F4C51C1739F700617471 /* WatchSessionManager.swift */; };
 		1765F4C81C173CAA00617471 /* WCSessionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1765F4C71C173CAA00617471 /* WCSessionExtensions.swift */; };
-		1765F4CA1C17415C00617471 /* WatchCommunicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1765F4C91C17415C00617471 /* WatchCommunicationManager.swift */; };
-		1765F4CC1C17480F00617471 /* WatchSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1765F4CB1C17480F00617471 /* WatchSessionProvider.swift */; };
 		864D8AFDA3F87A726482ED47 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E21D132F34A359E00B87C2 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,8 +85,6 @@
 		175AFB061C15D3BD00F241A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1765F4C51C1739F700617471 /* WatchSessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchSessionManager.swift; sourceTree = "<group>"; };
 		1765F4C71C173CAA00617471 /* WCSessionExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WCSessionExtensions.swift; sourceTree = "<group>"; };
-		1765F4C91C17415C00617471 /* WatchCommunicationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchCommunicationManager.swift; sourceTree = "<group>"; };
-		1765F4CB1C17480F00617471 /* WatchSessionProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchSessionProvider.swift; sourceTree = "<group>"; };
 		1D04E16B974C1AE8F6C166BE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		63E21D132F34A359E00B87C2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF0C5BBC45279822D581D59 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -155,8 +151,6 @@
 				175AFAE91C15D3BD00F241A9 /* Info.plist */,
 				1765F4C51C1739F700617471 /* WatchSessionManager.swift */,
 				1765F4C71C173CAA00617471 /* WCSessionExtensions.swift */,
-				1765F4C91C17415C00617471 /* WatchCommunicationManager.swift */,
-				1765F4CB1C17480F00617471 /* WatchSessionProvider.swift */,
 			);
 			path = WatchCommunicationTestApp;
 			sourceTree = "<group>";
@@ -375,8 +369,6 @@
 			files = (
 				1765F4C61C1739F700617471 /* WatchSessionManager.swift in Sources */,
 				175AFAE01C15D3BD00F241A9 /* ViewController.swift in Sources */,
-				1765F4CA1C17415C00617471 /* WatchCommunicationManager.swift in Sources */,
-				1765F4CC1C17480F00617471 /* WatchSessionProvider.swift in Sources */,
 				1765F4C81C173CAA00617471 /* WCSessionExtensions.swift in Sources */,
 				175AFADE1C15D3BD00F241A9 /* AppDelegate.swift in Sources */,
 			);

@@ -13,7 +13,7 @@ import WatchConnectivity
 import Alamofire
 
 @available(iOS 9.0, *)
-class WatchSessionManager: NSObject, WCSessionDelegate, WatchSessionProvider {
+class WatchSessionManager: NSObject, WCSessionDelegate {
     
     static let sharedManager = WatchSessionManager()
     private override init() {
@@ -41,6 +41,12 @@ class WatchSessionManager: NSObject, WCSessionDelegate, WatchSessionProvider {
                         NSNotificationCenter.defaultCenter().postNotificationName("any-name", object: nil, userInfo: ["any-key": currentTemperature])
                 }
         }
+    }
+    
+    func sendMessageToWatch(message: String) {
+        guard let session = validReachableSession else { return }
+        
+        session.sendMessage(["fbewuofbeuwof": message], replyHandler: nil, errorHandler: nil)
     }
     
     // MARK: Private Implementation
